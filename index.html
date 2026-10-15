@@ -146,9 +146,34 @@ a:hover{text-decoration:underline;}
 }
 .footer a{color:var(--fg-2);}
 .footer a:hover{color:var(--cyan);}
+.signup{
+  max-width:600px;margin:0 auto;text-align:center;
+  padding:3rem 2rem;
+}
+.signup h2{
+  font-family:var(--f-orb);font-size:clamp(1.2rem,3vw,1.6rem);
+  font-weight:700;letter-spacing:.06em;color:var(--fg);margin-bottom:.75rem;
+}
+.signup p{
+  font-size:.9rem;color:var(--fg-2);line-height:1.75;margin-bottom:1.75rem;
+}
+.signup-form{
+  display:flex;flex-direction:column;gap:.75rem;
+}
+.signup-form input{
+  width:100%;padding:.65rem 1.4rem;
+  border-radius:8px;border:1px solid var(--line-hi);
+  background:var(--card);color:var(--fg);
+  font-family:var(--f-mono);font-size:.82rem;
+  transition:border-color .2s;outline:none;
+}
+.signup-form input::placeholder{color:var(--fg-dim);}
+.signup-form input:focus{border-color:rgba(0,229,255,.5);}
+.signup-form .btn{width:100%;justify-content:center;}
 @media (max-width:640px){
   .stat-div{display:none;}
   .nav{flex-direction:column;align-items:flex-start;}
+  .signup{padding:2rem 1.25rem;}
 }
 </style>
 </head>
@@ -193,6 +218,16 @@ a:hover{text-decoration:underline;}
       <a class="btn btn-outline" href="https://discord.gg/qST3UfFAr9">Discord</a>
     </div>
   </header>
+
+  <div class="signup">
+    <h2>Get the next drop</h2>
+    <p>New volumes and MEGA episodes land here first.<br>No spam. Unsubscribe anytime.</p>
+    <form class="signup-form" action="https://formspree.io/f/xbgdqdar" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <button type="submit" class="btn btn-primary">Join the list</button>
+    </form>
+  </div>
 
   <div class="divider"></div>
 
